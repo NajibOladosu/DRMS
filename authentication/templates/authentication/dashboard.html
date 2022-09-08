@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css'%}">
+</head>
+<body>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" roles="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+    <h1>Hello, {{ username }}</h1>
+    <h1>Hello, {{ token }}</h1>
+    <h4>Login Successful.</h4>
+    <button type="submit"><a href="/signout">Sign Out</a></button>
+    {% else %}
+    <h4>Some error occured. Please sign in again.</h4>
+    <button type="submit"><a href="/">Sign In</a></button>
+    {% endif %}
+
+</body>
+</html>
