@@ -169,4 +169,32 @@ button:hover {
 }
 button:hover a {
   color: white;
+}
+
+#alert-button {
+  color: rgb(255, 255, 255);
+  margin-top: -1px;
+  margin-left: -2px;
+  padding-top: -1px;
+  padding-left: -1px;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+#alert-button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+#message {
+  display: none;
+}
+
+.alert {
+  padding-top: 5px;
+  text-align: center;
 }/*# sourceMappingURL=login.css.map */
