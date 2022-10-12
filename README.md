@@ -9,3 +9,6 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 goto http://127.0.0.1:8000/ to view the login page and explore.
+
+
+http://178.79.158.24:8000/
